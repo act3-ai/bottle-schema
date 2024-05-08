@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"git.act3-ace.com/ace/data/schema/pkg/selectors"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/selectors"
 )
 
 func TestParseSourceURI(t *testing.T) {

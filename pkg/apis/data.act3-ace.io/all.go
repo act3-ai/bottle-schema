@@ -4,12 +4,12 @@ package bottle
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1 "git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1"
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha2"
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha3"
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha4"
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha5"
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1beta1"
+	v1 "gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha2"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha3"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha4"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha5"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1beta1"
 )
 
 var (

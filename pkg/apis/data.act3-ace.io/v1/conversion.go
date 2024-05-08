@@ -8,12 +8,12 @@ import (
 	ocispecv1 "github.com/opencontainers/image-spec/specs-go/v1"
 	"k8s.io/apimachinery/pkg/conversion"
 
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha2"
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha3"
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha4"
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha5"
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1beta1"
-	"git.act3-ace.com/ace/data/schema/pkg/mediatype"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha2"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha3"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha4"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha5"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1beta1"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/mediatype"
 )
 
 // SetDefault_Bottle sets the fields not already set to default values

@@ -4,7 +4,8 @@ package main
 import (
 	"os"
 
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/jsonschema"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/jsonschema"
+
 	"git.act3-ace.com/ace/go-common/pkg/cmd"
 	"git.act3-ace.com/ace/go-common/pkg/runner"
 )

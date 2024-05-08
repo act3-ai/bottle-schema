@@ -6,8 +6,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/conversion"
 
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha2"
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha3"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha2"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha3"
 )
 
 // Convert_v1alpha2_Bottle_To_v1alpha4_Bottle is a bottle converter

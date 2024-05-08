@@ -7,10 +7,10 @@ import (
 	"path"
 	"strings"
 
-	"git.act3-ace.com/ace/data/schema/pkg/mediatype"
-	"git.act3-ace.com/ace/data/schema/pkg/util"
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/opencontainers/go-digest"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/mediatype"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/util"
 	apivalidation "k8s.io/apimachinery/pkg/api/validation"
 	v1validation "k8s.io/apimachinery/pkg/apis/meta/v1/validation"
 	"k8s.io/apimachinery/pkg/util/validation/field"

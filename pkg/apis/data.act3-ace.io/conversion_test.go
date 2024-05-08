@@ -11,9 +11,9 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 
-	v1 "git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1"
-	"git.act3-ace.com/ace/data/schema/pkg/mediatype"
-	val "git.act3-ace.com/ace/data/schema/pkg/validation"
+	v1 "gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/mediatype"
+	val "gitlab.com/act3-ai/asce/data/schema/pkg/validation"
 )
 
 type ConversionTestSuite struct {
@@ -59,7 +59,7 @@ func (suite *ConversionTestSuite) TestLoad_NoMigration() {
 	suite.T().Log(bottleOriginal)
 
 	// NoOp conversion
-	var bottle = &v1.Bottle{}
+	bottle := &v1.Bottle{}
 	suite.NoError(suite.scheme.Convert(bottleOriginal, bottle, nil))
 	// Defaulting adds back in the apiVersion and kind
 	suite.scheme.Default(bottle)
@@ -129,7 +129,7 @@ func (suite *ConversionTestSuite) TestLoad_MigrateWithManifest_v1beta1() {
 	bottleOriginal, err := runtime.Decode(suite.codecs.UniversalDeserializer(), []byte(jsonData))
 	suite.NoError(err)
 
-	var bottle = &v1.Bottle{}
+	bottle := &v1.Bottle{}
 	suite.NoError(suite.scheme.Convert(bottleOriginal, bottle, manifest))
 
 	// Instead of doing a one-stop decode (desearialize, default, and convert) we do the above to allow us to inject a context
@@ -171,7 +171,7 @@ func (suite *ConversionTestSuite) TestLoad_Migrate_v1beta1() {
 	bottleOriginal, err := runtime.Decode(suite.codecs.UniversalDeserializer(), []byte(jsonData))
 	suite.NoError(err)
 
-	var bottle = &v1.Bottle{}
+	bottle := &v1.Bottle{}
 	suite.NoError(suite.scheme.Convert(bottleOriginal, bottle, nil))
 
 	// Instead of doing a one-stop decode (desearialize, default, and convert) we do the above to allow us to inject a context
@@ -228,7 +228,7 @@ func (suite *ConversionTestSuite) TestLoad_Migrate_v1alpha4() {
 		]
 	}
 `
-	var bottle = &v1.Bottle{}
+	bottle := &v1.Bottle{}
 	suite.NoError(runtime.DecodeInto(suite.codecs.UniversalDecoder(), []byte(jsonData), bottle))
 	suite.Equal(v1.GroupVersion.Version, bottle.GroupVersionKind().Version)
 	suite.Equal("Bottle", bottle.GroupVersionKind().Kind)
@@ -282,7 +282,7 @@ func (suite *ConversionTestSuite) TestLoad_Migrate_v1alpha3() {
 		]
 	}
 `
-	var bottle = &v1.Bottle{}
+	bottle := &v1.Bottle{}
 	suite.NoError(runtime.DecodeInto(suite.codecs.UniversalDecoder(), []byte(jsonData), bottle))
 	suite.Equal(v1.GroupVersion.Version, bottle.GroupVersionKind().Version)
 	suite.Equal("Bottle", bottle.GroupVersionKind().Kind)
@@ -339,7 +339,7 @@ func (suite *ConversionTestSuite) TestLoad_Migrate_v1alpha2() {
 		]
 	}
 `
-	var bottle = &v1.Bottle{}
+	bottle := &v1.Bottle{}
 	suite.NoError(runtime.DecodeInto(suite.codecs.UniversalDecoder(), []byte(jsonData), bottle))
 	suite.Equal(v1.GroupVersion.Version, bottle.GroupVersionKind().Version)
 	suite.Equal("Bottle", bottle.GroupVersionKind().Kind)
@@ -401,7 +401,7 @@ parts:
       label2: otherlabel
 `
 
-	var bottle = &v1.Bottle{}
+	bottle := &v1.Bottle{}
 	suite.NoError(runtime.DecodeInto(suite.codecs.UniversalDecoder(), []byte(yamlData), bottle))
 	suite.Equal(v1.GroupVersion.Version, bottle.GroupVersionKind().Version)
 	suite.Equal("Bottle", bottle.GroupVersionKind().Kind)
@@ -462,7 +462,7 @@ parts:
       label2: otherlabel
 `
 
-	var bottle = &v1.Bottle{}
+	bottle := &v1.Bottle{}
 	suite.NoError(runtime.DecodeInto(suite.codecs.UniversalDecoder(), []byte(yamlData), bottle))
 	suite.Equal(v1.GroupVersion.Version, bottle.GroupVersionKind().Version)
 	suite.Equal("Bottle", bottle.GroupVersionKind().Kind)

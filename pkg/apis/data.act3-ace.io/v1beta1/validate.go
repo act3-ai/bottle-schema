@@ -9,8 +9,8 @@ import (
 	v1validation "k8s.io/apimachinery/pkg/apis/meta/v1/validation"
 	"k8s.io/apimachinery/pkg/util/validation/field"
 
-	"git.act3-ace.com/ace/data/schema/pkg/util"
-	val "git.act3-ace.com/ace/data/schema/pkg/validation"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/util"
+	val "gitlab.com/act3-ai/asce/data/schema/pkg/validation"
 )
 
 // Validate Part using ozzo-validation and k8s label validation
@@ -105,7 +105,6 @@ func ValidateParts(parts []Part) error {
 
 // ValidatePublicArtifacts validates public artifacts path is unique and that each artifact belongs to a single part
 func ValidatePublicArtifacts(b Bottle) error {
-
 	// PublicArtifacts.Path is unique
 	artifactPaths := make(map[string]bool, len(b.Parts))
 	for _, a := range b.PublicArtifacts {

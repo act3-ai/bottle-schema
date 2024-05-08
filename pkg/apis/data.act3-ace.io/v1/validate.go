@@ -8,9 +8,9 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
 
-	"git.act3-ace.com/ace/data/schema/pkg/mediatype"
-	"git.act3-ace.com/ace/data/schema/pkg/util"
-	val "git.act3-ace.com/ace/data/schema/pkg/validation"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/mediatype"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/util"
+	val "gitlab.com/act3-ai/asce/data/schema/pkg/validation"
 )
 
 // Validate Part
@@ -130,7 +130,6 @@ func validatePartsWithContext(ctx context.Context, parts []Part) error {
 
 // validatePublicArtifacts validates public artifacts path is unique and that each artifact belongs to a single part
 func validatePublicArtifacts(b Bottle) error {
-
 	// PublicArtifacts.Path is unique
 	artifactPaths := make(map[string]struct{}, len(b.Parts))
 	for _, a := range b.PublicArtifacts {

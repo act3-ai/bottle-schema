@@ -8,8 +8,8 @@ import (
 
 	"github.com/opencontainers/go-digest"
 
-	"git.act3-ace.com/ace/data/schema/pkg/mediatype"
-	"git.act3-ace.com/ace/data/schema/pkg/selectors"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/mediatype"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/selectors"
 )
 
 // IsPathPrefix returns true iff prefixPath is a path prefix for path

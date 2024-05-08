@@ -4,11 +4,11 @@ import (
 	"github.com/opencontainers/go-digest"
 	"k8s.io/apimachinery/pkg/conversion"
 
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha2"
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha3"
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha4"
-	"git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha5"
-	"git.act3-ace.com/ace/data/schema/pkg/mediatype"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha2"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha3"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha4"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha5"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/mediatype"
 )
 
 // Convert_v1alpha5_Bottle_To_v1beta1_Bottle converts Bottle from v1alpha5 to v1beta1

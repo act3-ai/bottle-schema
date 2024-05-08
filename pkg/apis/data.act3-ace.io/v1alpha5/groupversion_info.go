@@ -4,7 +4,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	"git.act3-ace.com/ace/data/schema/pkg/apis/internal/conversion"
+	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/internal/conversion"
 )
 
 var (
@@ -25,7 +25,6 @@ func addKnownTypes(scheme *runtime.Scheme) error {
 }
 
 func addKnownConversions(scheme *runtime.Scheme) error {
-
 	if err := conversion.AddConversionFuncHelper(scheme, Convert_v1alpha2_Bottle_To_v1alpha5_Bottle); err != nil {
 		return err
 	}

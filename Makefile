@@ -94,10 +94,10 @@ docs/apis/%.md: tool/crd-ref-docs $(wildcard pkg/apis/$*/*_types.go)
 
 # .PHONY: gen_conversion
 # gen_conversion: tool/controller-gen 
-# 	tool/conversion-gen -i git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha2,git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha3,git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha4,git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha5,git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1beta1 --go-header-file ./header.txt -p pkg/api -v=2 -O zz_generated.conversion
+# 	tool/conversion-gen -i gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha2,gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha3,gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha4,gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha5,gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1beta1 --go-header-file ./header.txt -p pkg/api -v=2 -O zz_generated.conversion
 
 # .PHONY: gen_defaults
 # gen_defaults: tool/controller-gen 
-# 	tool/defaulter-gen -i git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha2,git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha3,git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha4,git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1alpha5,git.act3-ace.com/ace/data/schema/pkg/apis/data.act3-ace.io/v1beta1 --go-header-file ./header.txt -v=6
+# 	tool/defaulter-gen -i gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha2,gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha3,gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha4,gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha5,gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1beta1 --go-header-file ./header.txt -v=6
 
 # The above command output files to the wrong path because they are only meant to be run in the GOPATH.  This can be hacked around by using the script https://github.com/kubernetes/kubernetes/blob/master/hack/run-in-gopath.sh

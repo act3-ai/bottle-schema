@@ -1,4 +1,4 @@
-module git.act3-ace.com/ace/data/schema
+module gitlab.com/act3-ai/asce/data/schema
 
 go 1.21
 
