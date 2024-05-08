@@ -5,7 +5,6 @@ go 1.21
 toolchain go1.21.1
 
 require (
-	git.act3-ace.com/ace/go-common v0.0.0-20240319120227-e77a013aa92d
 	github.com/go-ozzo/ozzo-validation/v4 v4.3.0
 	github.com/invopop/jsonschema v0.12.0
 	github.com/opencontainers/go-digest v1.0.0
@@ -39,6 +38,7 @@ require (
 	github.com/spf13/cobra v1.8.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/wk8/go-ordered-map/v2 v2.1.8 // indirect
+	gitlab.com/act3-ai/asce/go-common v0.0.0-20240508194511-8205ae7d0e17 // indirect
 	golang.org/x/net v0.24.0 // indirect
 	golang.org/x/sys v0.19.0 // indirect
 	golang.org/x/text v0.14.0 // indirect

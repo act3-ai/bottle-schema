@@ -1,5 +1,3 @@
-git.act3-ace.com/ace/go-common v0.0.0-20240319120227-e77a013aa92d h1:ou5/uM7NF6YEfArm3wnCMfZri6+lHYDjogKJNNTrfvs=
-git.act3-ace.com/ace/go-common v0.0.0-20240319120227-e77a013aa92d/go.mod h1:gVgXMJokXq/GAmW07OdzNDQvKHCiYnBvk0+seOBadHs=
 github.com/MakeNowJust/heredoc/v2 v2.0.1 h1:rlCHh70XXXv7toz95ajQWOWQnN4WNLt0TdpZYIR/J6A=
 github.com/MakeNowJust/heredoc/v2 v2.0.1/go.mod h1:6/2Abh5s+hc3g9nbWLe9ObDIOhaRrqsyY9MWy+4JdRM=
 github.com/adrg/xdg v0.4.0 h1:RzRqFcjH4nE5C6oTAxhBtoE2IRyjBSa62SCbyPidvls=
@@ -70,6 +68,8 @@ github.com/wk8/go-ordered-map/v2 v2.1.8 h1:5h/BUHu93oj4gIdvHHHGsScSTMijfx5PeYkE/
 github.com/wk8/go-ordered-map/v2 v2.1.8/go.mod h1:5nJHM5DyteebpVlHnWMV0rPz6Zp7+xBAnxjb1X5vnTw=
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.2.1/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
+gitlab.com/act3-ai/asce/go-common v0.0.0-20240508194511-8205ae7d0e17 h1:KfbppIKbDPkJA5OpkeMfuZ/Aq2Jml9d2UEiDJOJl9g4=
+gitlab.com/act3-ai/asce/go-common v0.0.0-20240508194511-8205ae7d0e17/go.mod h1:LDmEwGP6Hfxv0IiSa5IvHhSyUCW1vryI7qSniKB09IA=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=

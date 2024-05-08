@@ -10,7 +10,7 @@ import (
 
 	bottle "gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io"
 
-	"git.act3-ace.com/ace/go-common/pkg/genschema"
+	"gitlab.com/act3-ai/asce/go-common/pkg/genschema"
 )
 
 func main() {
