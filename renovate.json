@@ -1,0 +1,9 @@
+{
+    "hostRules": [
+        {
+            "matchHost": "https://git.act3-ace.com/ace/go-common",
+            "username": "{{ secrets.CI_REGISTRY_USER }}",
+            "password": "{{ secrets.CI_REGISTRY_PASSWORD }}"
+        }
+    ]
+}

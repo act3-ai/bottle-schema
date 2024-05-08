@@ -1,0 +1,12 @@
+# include:
+#   - project: devsecops/cicd/pipeline
+#     ref: v19.0.7
+#     file: main.yml
+
+# semantic release:
+#   image:
+#     name: reg.git.act3-ace.com/devsecops/cicd/images/ci-go-semantic
+#   before_script:
+#   - !reference [.go_create_netrc, script]
+#   # - !reference [semantic release, before_script]
+#   - git config --global --add safe.directory /builds/$CI_PROJECT_PATH
