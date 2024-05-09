@@ -1,3 +1,5 @@
+> :warning: This is prerelease software.
+
 # ACE Data Bottle Schema
 
 This repository stores the definition of a ACE Data Bottle.
