@@ -11,3 +11,8 @@ The documentation for the schema versions can be found below:
 - [v1alpha5](./docs/apis/data.act3-ace.io/v1alpha5.md)
 - [v1beta1](./docs/apis/data.act3-ace.io/v1beta1.md)
 - [v1](./docs/apis/data.act3-ace.io/v1.md)
+
+
+---
+
+Approved for public release: distribution unlimited. Case Number: AFRL-2024-1542
