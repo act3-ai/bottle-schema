@@ -67,7 +67,7 @@ func (s *Schema) Test(
 	return dag.Go().
 		WithSource(s.Source).
 		WithCgoDisabled().
-		Exec([]string{"test", "./..."}).
+		Exec([]string{"go", "test", "./..."}).
 		Stdout(ctx)
 }
 
