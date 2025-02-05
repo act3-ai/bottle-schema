@@ -8,11 +8,13 @@ require (
 	github.com/opencontainers/go-digest v1.0.0
 	github.com/opencontainers/image-spec v1.1.0
 	github.com/stretchr/testify v1.10.0
-	gitlab.com/act3-ai/asce/go-common v0.0.0-20250204224146-e42430fa75ed
+	gitlab.com/act3-ai/asce/go-common v0.0.0-20250205183858-ad66b80e46d2
 	gopkg.in/yaml.v3 v3.0.1
 	k8s.io/apimachinery v0.32.1
 	sigs.k8s.io/yaml v1.4.0
 )
+
+require gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 
 require (
 	github.com/MakeNowJust/heredoc/v2 v2.0.1 // indirect
