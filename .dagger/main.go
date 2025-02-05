@@ -97,38 +97,3 @@ func (s *Schema) Release(
 		Token:  token,
 	}
 }
-
-func (s *Schema) Renovate(
-	ctx context.Context,
-	// Gitlab token with API access to the project(s) being renovated
-	// Must have API access
-	token *dagger.Secret,
-
-	// Gitlab registry username
-	// +optional
-	registryUser string,
-
-	// Gitlab registry password/token
-	// +optional
-	registryPassword *dagger.Secret,
-) (string, error) {
-	base := dag.Container().From("renovate/renovate:39-full").
-		WithMountedFile("/usr/local/bin/task", dag.Container().From("taskfile/task").File("/usr/local/bin/task")).
-		WithMountedFile("/usr/local/bin/yq", dag.Container().From("mikefarah/yq").File("/usr/bin/yq"))
-
-	return dag.Renovate("act3-ai/asce/data/schema", token, dagger.RenovateOpts{Base: base}).
-		With(func(r *dagger.Renovate) *dagger.Renovate {
-			if registryPassword != nil {
-				// Used for CI_REGISTRY_PASSWORD
-				return r.WithRegistryAuth("registry.gitlab.com", registryUser, registryPassword).
-					WithSecret("GITLAB_REGISTRY_USER", dag.SetSecret("act3-registry-user", registryUser)).
-					WithSecret("GITLAB_REGISTRY_PASSWORD", registryPassword)
-			} else {
-				// Used when token is a personal access token
-				return r.WithRegistryAuth("registry.gitlab.com", "__token__", token).
-					WithSecret("GITLAB_REGISTRY_USER", dag.SetSecret("act3-registry-user", "__token__")).
-					WithSecret("GITLAB_REGISTRY_PASSWORD", token)
-			}
-		}).
-		Update(ctx)
-}
