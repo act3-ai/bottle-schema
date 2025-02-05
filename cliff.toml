@@ -86,3 +86,5 @@ sort_commits = "oldest"
 
 [bump]
 breaking_always_bump_major = false
+# initial tag at time of public release
+initial_tag = "v1.2.13"
