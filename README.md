@@ -1,6 +1,6 @@
-> :warning: This is prerelease software.
-
 # ACE Data Bottle Schema
+
+> :warning: This is prerelease software.
 
 This repository stores the definition of a ACE Data Bottle.
 The documentation for the schema versions can be found below:
@@ -11,7 +11,6 @@ The documentation for the schema versions can be found below:
 - [v1alpha5](./docs/apis/data.act3-ace.io/v1alpha5.md)
 - [v1beta1](./docs/apis/data.act3-ace.io/v1beta1.md)
 - [v1](./docs/apis/data.act3-ace.io/v1.md)
-
 
 ---
 

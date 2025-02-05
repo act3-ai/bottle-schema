@@ -23,16 +23,16 @@ linters:
 
 linters-settings:
   # importas:
-    # if set to `true`, force to use alias.
-    # no-unaliased: true
-    # List of aliases
-    # alias:
-    #   - pkg: github.com/opencontainers/go-digest
-    #     alias: digest
-  
+  # if set to `true`, force to use alias.
+  # no-unaliased: true
+  # List of aliases
+  # alias:
+  #   - pkg: github.com/opencontainers/go-digest
+  #     alias: digest
+
   staticcheck:
     # https://staticcheck.io/docs/options#checks
-    checks: [ "all" ]
+    checks: ["all"]
 
   revive:
     ignore-generated-header: true
@@ -43,7 +43,7 @@ linters-settings:
       #   severity: warning
       #   arguments: [120]
       - name: unhandled-error
-        arguments : ["fmt.Printf", "fmt.Fprintln", "fmt.Println"]
+        arguments: ["fmt.Printf", "fmt.Fprintln", "fmt.Println"]
       - name: blank-imports
       - name: context-as-argument
       - name: context-keys-type
