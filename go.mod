@@ -1,8 +1,6 @@
 module gitlab.com/act3-ai/asce/data/schema
 
-go 1.21
-
-toolchain go1.21.1
+go 1.23.5
 
 require (
 	github.com/go-ozzo/ozzo-validation/v4 v4.3.0
