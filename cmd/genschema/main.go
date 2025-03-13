@@ -2,6 +2,7 @@
 package main
 
 import (
+	"context"
 	"os"
 
 	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/jsonschema"
@@ -12,8 +13,9 @@ import (
 
 func main() {
 	root := cmd.NewGenschemaCmd(jsonschema.FS, []cmd.SchemaAssociation{})
-
-	if err := runner.Run(root, "GENSCHEMA_VERBOSITY"); err != nil {
+	ctx := context.Background()
+	root.SetContext(ctx)
+	if err := runner.Run(root.Context(), root, "GENSCHEMA_VERBOSITY"); err != nil {
 		os.Exit(1)
 	}
 }
