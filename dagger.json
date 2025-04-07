@@ -1,8 +1,15 @@
 {
   "name": "schema",
-  "engineVersion": "v0.15.1",
-  "sdk": "go",
+  "engineVersion": "v0.18.0",
+  "sdk": {
+    "source": "go"
+  },
   "dependencies": [
+    {
+      "name": "gh",
+      "source": "github.com/sagikazarmark/daggerverse/gh@gh/v0.11.0",
+      "pin": "c1be27189ce47d28f84014b715f78e47db9fbadc"
+    },
     {
       "name": "go",
       "source": "github.com/sagikazarmark/daggerverse/go@go/v0.9.0",
