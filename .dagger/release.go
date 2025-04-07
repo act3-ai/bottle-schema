@@ -100,7 +100,6 @@ func (s *Schema) Publish(ctx context.Context,
 	version = strings.TrimSpace(version)
 	vVersion := "v" + version
 
-	title := fmt.Sprintf("Release %s", vVersion)
 	notes := src.File(filepath.Join("releases", vVersion+".md"))
 	return dag.Gh(
 		dagger.GhOpts{
@@ -109,7 +108,7 @@ func (s *Schema) Publish(ctx context.Context,
 			Source: src,
 		}).
 		Release().
-		Create(ctx, vVersion, title,
+		Create(ctx, vVersion, vVersion, // release title same as tagged version
 			dagger.GhReleaseCreateOpts{
 				NotesFile: notes,
 			})
