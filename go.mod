@@ -3,12 +3,12 @@ module github.com/act3-ai/bottle-schema
 go 1.23.5
 
 require (
+	github.com/act3-ai/go-common v0.0.0-20250407153809-0595abfee64d
 	github.com/go-ozzo/ozzo-validation/v4 v4.3.0
 	github.com/invopop/jsonschema v0.13.0
 	github.com/opencontainers/go-digest v1.0.0
 	github.com/opencontainers/image-spec v1.1.1
 	github.com/stretchr/testify v1.10.0
-	gitlab.com/act3-ai/asce/go-common v0.0.0-20250301173836-59817e757a36
 	gopkg.in/yaml.v3 v3.0.1
 	k8s.io/apimachinery v0.32.3
 	sigs.k8s.io/yaml v1.4.0

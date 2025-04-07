@@ -7,8 +7,8 @@ import (
 
 	"github.com/act3-ai/bottle-schema/pkg/apis/data.act3-ace.io/jsonschema"
 
-	"gitlab.com/act3-ai/asce/go-common/pkg/cmd"
-	"gitlab.com/act3-ai/asce/go-common/pkg/runner"
+	"github.com/act3-ai/go-common/pkg/cmd"
+	"github.com/act3-ai/go-common/pkg/runner"
 )
 
 func main() {
