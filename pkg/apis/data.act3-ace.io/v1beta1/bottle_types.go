@@ -5,7 +5,7 @@ import (
 	"gopkg.in/yaml.v3"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	util "gitlab.com/act3-ai/asce/data/schema/pkg/apis/internal/yaml"
+	util "github.com/act3-ai/bottle-schema/pkg/apis/internal/yaml"
 )
 
 // RELEASED VERSION:  Do make any schema breaking changes in this file.

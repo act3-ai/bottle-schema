@@ -11,9 +11,9 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 
-	v1 "gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1"
-	"gitlab.com/act3-ai/asce/data/schema/pkg/mediatype"
-	val "gitlab.com/act3-ai/asce/data/schema/pkg/validation"
+	v1 "github.com/act3-ai/bottle-schema/pkg/apis/data.act3-ace.io/v1"
+	"github.com/act3-ai/bottle-schema/pkg/mediatype"
+	val "github.com/act3-ai/bottle-schema/pkg/validation"
 )
 
 type ConversionTestSuite struct {

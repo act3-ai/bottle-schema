@@ -8,9 +8,9 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
 
-	"gitlab.com/act3-ai/asce/data/schema/pkg/mediatype"
-	"gitlab.com/act3-ai/asce/data/schema/pkg/util"
-	val "gitlab.com/act3-ai/asce/data/schema/pkg/validation"
+	"github.com/act3-ai/bottle-schema/pkg/mediatype"
+	"github.com/act3-ai/bottle-schema/pkg/util"
+	val "github.com/act3-ai/bottle-schema/pkg/validation"
 )
 
 // Validate Part

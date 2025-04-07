@@ -7,7 +7,7 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	ocispec "github.com/opencontainers/image-spec/specs-go/v1"
 
-	"gitlab.com/act3-ai/asce/data/schema/pkg/mediatype"
+	"github.com/act3-ai/bottle-schema/pkg/mediatype"
 )
 
 // manifestKey is how we find the Manifest in a context.Context.

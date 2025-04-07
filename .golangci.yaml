@@ -1,90 +1,77 @@
+version: "2"
 linters:
   enable:
-    - gofmt
     - bodyclose
-    - exhaustive
     - dupl
-    - errorlint
-    - prealloc
-    - importas
-    - importas
-    - errorlint
     - errname
-    - revive
+    - errorlint
+    - exhaustive
     - gocritic
-    - gosimple
-    - govet
-    - ineffassign
-    - typecheck
-    - unused
+    - importas
     - misspell
-    - goimports
-    - staticcheck
-
-linters-settings:
-  # importas:
-  # if set to `true`, force to use alias.
-  # no-unaliased: true
-  # List of aliases
-  # alias:
-  #   - pkg: github.com/opencontainers/go-digest
-  #     alias: digest
-
-  staticcheck:
-    # https://staticcheck.io/docs/options#checks
-    checks: ["all"]
-
-  revive:
-    ignore-generated-header: true
-    severity: warning
+    - prealloc
+    - revive
+  settings:
+    revive:
+      severity: warning
+      rules:
+        - name: atomic
+        - name: unhandled-error
+          arguments:
+            - fmt.Printf
+            - fmt.Fprintln
+            - fmt.Println
+        - name: blank-imports
+        - name: context-as-argument
+        - name: context-keys-type
+        - name: dot-imports
+        - name: error-return
+        - name: error-strings
+        - name: error-naming
+        - name: exported
+        - name: if-return
+        - name: increment-decrement
+        - name: var-naming
+        - name: var-declaration
+        - name: package-comments
+        - name: range
+        - name: receiver-naming
+        - name: time-naming
+        - name: unexported-return
+        - name: indent-error-flow
+        - name: errorf
+        - name: empty-block
+        - name: superfluous-else
+        - name: unreachable-code
+        - name: redefines-builtin-id
+        - name: defer
+        - name: useless-break
+        - name: unexported-naming
+        - name: cognitive-complexity
+          arguments:
+            - 27
+        - name: use-any
+    staticcheck:
+      checks:
+        - all
+        - "-ST1003"
+  exclusions:
+    generated: lax
     rules:
-      - name: atomic
-      # - name: line-length-limit
-      #   severity: warning
-      #   arguments: [120]
-      - name: unhandled-error
-        arguments: ["fmt.Printf", "fmt.Fprintln", "fmt.Println"]
-      - name: blank-imports
-      - name: context-as-argument
-      - name: context-keys-type
-      - name: dot-imports
-      - name: error-return
-      - name: error-strings
-      - name: error-naming
-      - name: exported
-      - name: if-return
-      - name: increment-decrement
-      - name: var-naming
-      - name: var-declaration
-      - name: package-comments
-      - name: range
-      - name: receiver-naming
-      - name: time-naming
-      - name: unexported-return
-      - name: indent-error-flow
-      - name: errorf
-      - name: empty-block
-      - name: superfluous-else
-      # - name: unused-parameter
-      - name: unreachable-code
-      - name: redefines-builtin-id
-      - name: defer
-      - name: useless-break
-      - name: unexported-naming
-      - name: cognitive-complexity
-        arguments: [27]
-      - name: use-any
-
-issues:
-  # uncomment to enable more linting
-  exclude-use-default: false
-
-  exclude-rules:
-    - path: pkg/apis/data.act3-ace.io/(.*)/bottle_types.go
-      linters:
-        - unused
-
-  include:
-    - EXC0005
-    - EXC0012
-    - EXC0009
+      - linters:
+          - unused
+        path: pkg/apis/data.act3-ace.io/(.*)/bottle_types.go
+    paths:
+      - third_party$
+      - builtin$
+      - examples$
+formatters:
+  enable:
+    - gofmt
+    - goimports
+  exclusions:
+    generated: lax
+    paths:
+      - third_party$
+      - builtin$
+      - examples$

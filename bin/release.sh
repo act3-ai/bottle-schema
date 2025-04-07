@@ -5,11 +5,11 @@ set -euo pipefail
 help() {
     cat <<EOF
 Try using one of the following commands:
-prepare - prepare a release locally by producing the changelog, next version, and release notes
-approve - commit, tag, and push your approved release
-publish - publish the release to GitLab.
+prepare - prepare a release locally by producing the changelog, next version, and release notes.
+approve - commit, tag, and push your approved release.
+publish - publish the release to GitHub.
 
-Dependencies: dagger, ace-dt, and OCI registry access.
+Dependencies: dagger, and OCI registry access.
 EOF
     exit 1
 }
@@ -29,7 +29,7 @@ prepare)
 
     dagger call release prepare export --path=.
     version=$(cat VERSION)
-    # TODO do not overwrite the releases/v*.md file
+
     echo "Please review the local changes, especially releases/$version.md"
     ;;
 
@@ -48,7 +48,7 @@ approve)
 
 publish)
     # CI can then run this task (or it can be run manually)
-    dagger call with-registry-auth --address=registry.gitlab.com --username="$GITLAB_USER" --secret=env:GITLAB_TOKEN publish --token=env:GITLAB_TOKEN
+    dagger call publish --token=env:GITHUB_TOKEN
     ;;
 
 *)

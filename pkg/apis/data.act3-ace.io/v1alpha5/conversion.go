@@ -5,9 +5,9 @@ import (
 
 	"k8s.io/apimachinery/pkg/conversion"
 
-	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha2"
-	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha3"
-	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io/v1alpha4"
+	"github.com/act3-ai/bottle-schema/pkg/apis/data.act3-ace.io/v1alpha2"
+	"github.com/act3-ai/bottle-schema/pkg/apis/data.act3-ace.io/v1alpha3"
+	"github.com/act3-ai/bottle-schema/pkg/apis/data.act3-ace.io/v1alpha4"
 )
 
 // Convert_v1alpha4_Bottle_To_v1alpha5_Bottle converts Bottle from v1alpha4 to v1alpha5

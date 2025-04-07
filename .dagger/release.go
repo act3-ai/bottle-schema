@@ -4,6 +4,7 @@ import (
 	"context"
 	"dagger/schema/internal/dagger"
 	"fmt"
+	"path/filepath"
 	"strings"
 )
 
@@ -23,9 +24,8 @@ func (m *Release) gitCliffContainer() *dagger.Container {
 		With(func(r *dagger.Container) *dagger.Container {
 			if m.Token != nil {
 				// TODO this is specific to ACT3, also does not work yet in git-cliff
-				return r.WithSecretVariable("GITLAB_TOKEN", m.Token).
-					WithEnvVariable("GITLAB_API_URL", "https://gitlab.com/api/v4").
-					WithEnvVariable("GITLAB_REPO", "act3-ai/asce/data/schema")
+				return r.WithSecretVariable("GITHUB_TOKEN", m.Token).
+					WithEnvVariable("GITHUB_REPO", gitRepo)
 			}
 			return r
 		}).
@@ -90,40 +90,27 @@ func (s *Schema) Publish(ctx context.Context,
 	// +defaultPath="/"
 	src *dagger.Directory,
 
-	// gitlab personal access token
+	// personal access token
 	token *dagger.Secret,
-) (string, error) {
-	// build artifacts
-	// artifacts := s.Artifacts(ctx, src)
-
+) error {
 	version, err := src.File("VERSION").Contents(ctx)
 	if err != nil {
-		return "", err
+		return err
 	}
 	version = strings.TrimSpace(version)
+	vVersion := "v" + version
 
-	notes, err := src.File(fmt.Sprintf("releases/v%s.md", version)).Contents(ctx)
-	if err != nil {
-		return "", err
-	}
-
-	// create a GitLab release, attaching the artifacts
-	out, err := dag.Container().
-		From("registry.gitlab.com/gitlab-org/release-cli"). // TODO this is only amd64 (not arm64)
-		WithEnvVariable("CI_SERVER_URL", "https://gitlab.com").
-		WithEnvVariable("CI_PROJECT_ID", "57682301").
-		WithSecretVariable("GITLAB_PRIVATE_TOKEN", token).
-		WithExec([]string{"release-cli", "create",
-			"--name=Release v" + version,
-			"--description", notes, // there better be a space in this string otherwise it is treated as a file (what!!!!)
-			"--tag-name=v" + version,
-			"--ref=v" + version,
-			// "--assets-link", string(assetsJson),
+	title := fmt.Sprintf("Release %s", vVersion)
+	notes := src.File(filepath.Join("releases", vVersion+".md"))
+	return dag.Gh(
+		dagger.GhOpts{
+			Token:  token,
+			Repo:   gitRepo,
+			Source: src,
 		}).
-		Stdout(ctx)
-	if err != nil {
-		return "", err
-	}
-
-	return out, nil
+		Release().
+		Create(ctx, vVersion, title,
+			dagger.GhReleaseCreateOpts{
+				NotesFile: notes,
+			})
 }

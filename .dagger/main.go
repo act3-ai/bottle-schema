@@ -19,6 +19,11 @@ import (
 	"dagger/schema/internal/dagger"
 )
 
+const (
+	// repository information
+	gitRepo = "act3-ai/bottle-schema"
+)
+
 type Schema struct {
 	// source code directory
 	Source *dagger.Directory
