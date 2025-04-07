@@ -1,4 +1,4 @@
-module gitlab.com/act3-ai/asce/data/schema
+module github.com/act3-ai/bottle-schema
 
 go 1.23.5
 

@@ -4,7 +4,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	"gitlab.com/act3-ai/asce/data/schema/pkg/apis/internal/conversion"
+	"github.com/act3-ai/bottle-schema/pkg/apis/internal/conversion"
 )
 
 var (

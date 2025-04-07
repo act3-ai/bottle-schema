@@ -1,4 +1,4 @@
-// +k8s:conversion-gen=gitlab.com/act3-ai/asce/data/schema/pkg/apis/bottle.data.act3-ace.io
+// +k8s:conversion-gen=github.com/act3-ai/bottle-schema/pkg/apis/bottle.data.act3-ace.io
 // +kubebuilder:object:generate=true
 // +groupName=bottle.data.act3-ace.io
 

@@ -8,7 +8,7 @@ import (
 
 	"k8s.io/apimachinery/pkg/runtime"
 
-	bottle "gitlab.com/act3-ai/asce/data/schema/pkg/apis/data.act3-ace.io"
+	bottle "github.com/act3-ai/bottle-schema/pkg/apis/data.act3-ace.io"
 
 	"gitlab.com/act3-ai/asce/go-common/pkg/genschema"
 )
@@ -29,7 +29,7 @@ func main() {
 		log.Fatal(fmt.Errorf("error adding type data to conversion scheme: %w", err))
 	}
 
-	if err := genschema.GenerateGroupSchemas(dir, scheme, []string{"data.act3-ace.io"}, "gitlab.com/act3-ai/asce/data/schema"); err != nil {
+	if err := genschema.GenerateGroupSchemas(dir, scheme, []string{"data.act3-ace.io"}, "github.com/act3-ai/bottle-schema"); err != nil {
 		log.Fatal(fmt.Errorf("error generating schema: %w", err))
 	}
 }

@@ -10,8 +10,8 @@ import (
 	ocispec "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/stretchr/testify/assert"
 
-	"gitlab.com/act3-ai/asce/data/schema/pkg/mediatype"
-	val "gitlab.com/act3-ai/asce/data/schema/pkg/validation"
+	"github.com/act3-ai/bottle-schema/pkg/mediatype"
+	val "github.com/act3-ai/bottle-schema/pkg/validation"
 )
 
 /*

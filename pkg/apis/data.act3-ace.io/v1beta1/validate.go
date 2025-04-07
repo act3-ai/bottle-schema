@@ -9,8 +9,8 @@ import (
 	v1validation "k8s.io/apimachinery/pkg/apis/meta/v1/validation"
 	"k8s.io/apimachinery/pkg/util/validation/field"
 
-	"gitlab.com/act3-ai/asce/data/schema/pkg/util"
-	val "gitlab.com/act3-ai/asce/data/schema/pkg/validation"
+	"github.com/act3-ai/bottle-schema/pkg/util"
+	val "github.com/act3-ai/bottle-schema/pkg/validation"
 )
 
 // Validate Part using ozzo-validation and k8s label validation
