@@ -1,7 +1,0 @@
-
-# shellcheck shell=bash
-s=$(docker-credential-secretservice get <<< "registry.gitlab.com")
-GITLAB_USER=$(jq -r .Username <<< "$s")
-export GITLAB_USER
-GITLAB_TOKEN=$(jq -r .Secret <<< "$s")
-export GITLAB_TOKEN
